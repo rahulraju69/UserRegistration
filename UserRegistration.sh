@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 read -p "enter a name:" name
-pat="^[A-Z]{3}"
+pat="^[a-z]{1}[A-Z]{2,3}$"
 
 if [[ $name =~ $pat ]]
 then
