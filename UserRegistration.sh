@@ -1,11 +1,13 @@
 #!/bin/bash -x
 
-read -p "enter a name:" name
-pat="^[a-z]{1}[A-Z]{2,3}$"
-
-if [[ $name =~ $pat ]]
+shopt -s extglob
+echo "enter email:"
+read email
+pat="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,5}([.][a-zA-Z]{2,3})*$"
+if [[ $email =~ $pat ]]
 then
-	echo "name is valid"
+        echo valid
 else
-	echo "name is invalid"
+        echo invalid
 fi
+
