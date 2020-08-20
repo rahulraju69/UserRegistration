@@ -1,13 +1,13 @@
 #!/bin/bash -x
 
 shopt -s extglob
-echo "enter mobile number:"
-read number
-pat="^[0-9]{2}[[:space:]][0-9]{10}$"
-if [[ $number =~ $pat ]]
+echo "enter password:"
+read password
+pat="^[a-zA-z]{8,}$"
+if [[ $password =~ $pat ]]
 then
-        echo "number is valid"
+        echo "password is valid"
 else
-        echo "number is invalid"
+        echo "password is invalid"
 fi
 
