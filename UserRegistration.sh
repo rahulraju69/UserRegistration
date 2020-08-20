@@ -3,7 +3,8 @@
 shopt -s extglob
 echo "enter password:"
 read password
-if [[ ${#password} -ge 8 && "$password" == *[[:upper:]]* ]]
+pat="^[a-zA-Z0-9]{8,}"
+if [[ $password =~ $pat ]]
 then
         echo "password is valid"
 else
