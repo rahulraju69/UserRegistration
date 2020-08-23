@@ -3,7 +3,7 @@
 shopt -s extglob
 echo "enter password:"
 read password
-pat="^[a-zA-Z0-9]{8,}"
+pat="[a-z A-Z 0-9 \!\@\#\$\%\^\&\* ? = . ]{8}$"
 if [[ $password =~ $pat ]]
 then
         echo "password is valid"
